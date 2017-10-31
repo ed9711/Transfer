@@ -1,0 +1,25 @@
+dbsrv1:~$ psql csc343h-nizhison
+psql (9.5.9, server 9.5.8)
+Type "help" for help.
+
+csc343h-nizhison=> \d
+          List of relations
+ Schema |  Name   | Type  |  Owner   
+--------+---------+-------+----------
+ public | follow  | table | nizhison
+ public | guesses | table | nizhison
+ public | tweet   | table | nizhison
+(3 rows)
+
+csc343h-nizhison=> \q;
+Invalid command \q;. Try \? for help.
+csc343h-nizhison=> \q
+dbsrv1:~$ cd csc343db/JDBC_excercise/
+dbsrv1:~/csc343db/JDBC_excercise$ javac JDBC.java 
+dbsrv1:~/csc343db/JDBC_excercise$ java -cp /local/packages/jdbc-postgresql/postgresql-42.1.4.jar: JDBC
+[Cole, Avery, Sam, Madeleine, Cole, Michael, Mackenzie, Mackenzie, Micah, Jiaqi, Jamieson]
+What age?
+6
+age >= 6 on avg guessed 628
+dbsrv1:~/csc343db/JDBC_excercise$ 
+

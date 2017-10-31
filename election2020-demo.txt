@@ -1,0 +1,60 @@
+dbsrv1:~/csc343db/JDBC_excercise$ psql csc343h-nizhison
+psql (9.5.9, server 9.5.8)
+Type "help" for help.
+
+csc343h-nizhison=> \i ddl.sql
+psql:ddl.sql:5: NOTICE:  drop cascades to 10 other objects
+DETAIL:  drop cascades to table parlgov.country
+drop cascades to table parlgov.party
+drop cascades to table parlgov.cabinet
+drop cascades to table parlgov.cabinet_party
+drop cascades to type parlgov.election_type
+drop cascades to table parlgov.election
+drop cascades to table parlgov.election_result
+drop cascades to table parlgov.party_position
+drop cascades to table parlgov.party_family
+drop cascades to table parlgov.politician_president
+DROP SCHEMA
+CREATE SCHEMA
+SET
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TYPE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+COPY 5
+COPY 215
+COPY 289
+COPY 158
+COPY 729
+COPY 1404
+COPY 214
+COPY 107
+COPY 37
+ALTER TABLE
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+csc343h-nizhison=> \i election2020.sql
+INSERT 0 1
+INSERT 0 1
+INSERT 0 5
+csc343h-nizhison=> select *
+from election_result
+where description = '2020';
+  id  | election_id | party_id | alliance_id | seats | votes | description
+------+-------------+----------+-------------+-------+-------+-------------
+ 9692 |        1015 |      368 |             |   123 |   123 | 2020
+ 9693 |        1015 |     1259 |        9692 |   123 |   123 | 2020
+ 9694 |        1015 |     2650 |        9692 |   123 |   123 | 2020
+ 9695 |        1015 |      296 |             |   123 |   123 | 2020
+ 9696 |        1015 |     1255 |        9695 |   123 |   123 | 2020
+(5 rows)
+
+csc343h-nizhison=>
